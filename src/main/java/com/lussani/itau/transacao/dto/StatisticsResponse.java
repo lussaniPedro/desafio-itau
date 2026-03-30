@@ -9,7 +9,7 @@ public record StatisticsResponse(long count, double min, double max, double sum,
             stats.getCount() > 0 ? stats.getMin() : 0,
             stats.getCount() > 0 ? stats.getMax() : 0,
             stats.getSum(),
-            stats.getAverage()
+            stats.getAverage() > 0 ? stats.getMax() : 0
         );
     }
 }
